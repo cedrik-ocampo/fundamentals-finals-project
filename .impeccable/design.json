@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-30T00:00:00Z",
+  "title": "Design System: AniTrack",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "The Void",
+        "canonical": "#0f0f0f",
+        "tonalRamp": ["#0f0f0f", "#141414", "#1a1212", "#1f1414", "#2e1a1a", "#3e2020", "#5e2a2a", "#8e4040"]
+      },
+      "ember": {
+        "role": "neutral",
+        "displayName": "Ember",
+        "canonical": "#1a1212",
+        "tonalRamp": ["#0d0909", "#121010", "#1a1212", "#221818", "#2e1a1a", "#3e2020", "#5a2828", "#8a4040"]
+      },
+      "deep-ember": {
+        "role": "neutral",
+        "displayName": "Deep Ember",
+        "canonical": "#1f1414",
+        "tonalRamp": ["#0f0a0a", "#161010", "#1f1414", "#281818", "#361c1c", "#4a2020", "#6a2c2c", "#9a4040"]
+      },
+      "ember-border": {
+        "role": "neutral",
+        "displayName": "Ember Border",
+        "canonical": "#2e1a1a",
+        "tonalRamp": ["#160c0c", "#1f1010", "#2e1a1a", "#3c2020", "#4e2828", "#663030", "#8e4040", "#be6060"]
+      },
+      "crimson": {
+        "role": "primary",
+        "displayName": "Crimson",
+        "canonical": "#dc2626",
+        "tonalRamp": ["#450a0a", "#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fca5a5"]
+      },
+      "deep-crimson": {
+        "role": "primary",
+        "displayName": "Deep Crimson",
+        "canonical": "#b91c1c",
+        "tonalRamp": ["#450a0a", "#6b1212", "#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171"]
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "canonical": "#f0e0e0",
+        "tonalRamp": ["#3a2020", "#5a3030", "#7a4040", "#9a6060", "#c09090", "#d8b8b8", "#f0e0e0", "#fef2f2"]
+      },
+      "dusty-rose": {
+        "role": "neutral",
+        "displayName": "Dusty Rose",
+        "canonical": "#a89090",
+        "tonalRamp": ["#3a2020", "#5a3030", "#6a4040", "#7a5050", "#a89090", "#c8b0b0", "#e0d0d0", "#f0e8e8"]
+      },
+      "destructive": {
+        "role": "tertiary",
+        "displayName": "Alert Orange",
+        "canonical": "#f97316",
+        "tonalRamp": ["#431407", "#7c2d12", "#9a3412", "#c2410c", "#ea580c", "#f97316", "#fb923c", "#fdba74"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines. One per page, never more." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings (h2). The Letterboxd-style section label." },
+      "title": { "displayName": "Title", "purpose": "Card headings, dialog titles, sidebar labels." },
+      "body": { "displayName": "Body", "purpose": "All prose: descriptions, reviews, bio text. Max 65–75ch." },
+      "label": { "displayName": "Label", "purpose": "Metadata chips, badges, form labels, timestamps." }
+    },
+    "shadows": [
+      {
+        "name": "card-hover-glow",
+        "value": "0 8px 24px rgba(220, 38, 38, 0.15)",
+        "purpose": "Crimson ambient glow on interactive card hover. The only non-modal shadow in the system."
+      },
+      {
+        "name": "modal-scrim",
+        "value": "rgba(0, 0, 0, 0.6)",
+        "purpose": "Full-screen modal backdrop. Not a box-shadow — applied as a background overlay."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-standard",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "State changes and element entrances. Snappy start, smooth settle."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Micro-interactions: button hover, link colour change, border shift."
+      },
+      {
+        "name": "duration-standard",
+        "value": "200ms",
+        "purpose": "Card hover lift, scale transitions, nav state changes."
+      },
+      {
+        "name": "duration-enter",
+        "value": "250ms",
+        "purpose": "Element entrances: modals opening, dropdowns appearing, page section reveals."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single primary CTA per view. Violet Pulse fill, maximum one per screen region.",
+      "html": "<button class=\"ds-btn-primary\">Get Started Free</button>",
+      "css": ".ds-btn-primary { background: #7c3aed; color: #f8fafc; padding: 8px 24px; border-radius: 8px; border: none; font-family: 'Geist Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; line-height: 1.4; cursor: pointer; transition: background 150ms cubic-bezier(0.16,1,0.3,1), box-shadow 150ms cubic-bezier(0.16,1,0.3,1); display: inline-flex; align-items: center; gap: 6px; } .ds-btn-primary:hover { background: #6d28d9; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px #0f0f17, 0 0 0 4px #7c3aed; } .ds-btn-primary:active { background: #5b21b6; transform: translateY(1px); } .ds-btn-primary:disabled { opacity: 0.38; cursor: not-allowed; pointer-events: none; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary and nav actions. Transparent at rest, Deep Indigo on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Browse Anime</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #94a3b8; padding: 8px 16px; border-radius: 8px; border: none; font-family: 'Geist Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; line-height: 1.4; cursor: pointer; transition: background 150ms cubic-bezier(0.16,1,0.3,1), color 150ms cubic-bezier(0.16,1,0.3,1); display: inline-flex; align-items: center; gap: 6px; } .ds-btn-ghost:hover { background: #1e1e3a; color: #e2e8f0; } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 2px #0f0f17, 0 0 0 4px #7c3aed; } .ds-btn-ghost:disabled { opacity: 0.38; cursor: not-allowed; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Peer-level alternative to a primary action. Border-only at rest, violet border tint on hover.",
+      "html": "<button class=\"ds-btn-outline\">Add to List</button>",
+      "css": ".ds-btn-outline { background: transparent; color: #e2e8f0; padding: 8px 16px; border-radius: 8px; border: 1px solid #2d2d4e; font-family: 'Geist Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; line-height: 1.4; cursor: pointer; transition: border-color 150ms cubic-bezier(0.16,1,0.3,1); display: inline-flex; align-items: center; gap: 6px; } .ds-btn-outline:hover { border-color: rgba(124,58,237,0.5); } .ds-btn-outline:focus-visible { outline: none; box-shadow: 0 0 0 2px #0f0f17, 0 0 0 4px #7c3aed; } .ds-btn-outline:disabled { opacity: 0.38; cursor: not-allowed; }"
+    },
+    {
+      "name": "Anime Card",
+      "kind": "card",
+      "refersTo": "anime-card",
+      "description": "The primary content unit. 2:3 cover image with score badge and format strip. Hover lifts with violet glow.",
+      "html": "<a class=\"ds-anime-card\" href=\"#\"><div class=\"ds-anime-card__cover\"><div class=\"ds-anime-card__img-placeholder\"></div><div class=\"ds-anime-card__score\"><svg width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"#facc15\" stroke=\"none\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"/></svg>8.7</div><div class=\"ds-anime-card__format\">TV</div></div><p class=\"ds-anime-card__title\">Fullmetal Alchemist: Brotherhood</p></a>",
+      "css": ".ds-anime-card { display: block; text-decoration: none; cursor: pointer; } .ds-anime-card__cover { position: relative; aspect-ratio: 2/3; overflow: hidden; border-radius: 8px; background: #1a1a2e; border: 1px solid #2d2d4e; transition: border-color 200ms cubic-bezier(0.16,1,0.3,1), box-shadow 200ms cubic-bezier(0.16,1,0.3,1), transform 200ms cubic-bezier(0.16,1,0.3,1); } .ds-anime-card:hover .ds-anime-card__cover { border-color: rgba(124,58,237,0.5); box-shadow: 0 8px 24px rgba(124,58,237,0.12); transform: translateY(-2px); } .ds-anime-card__img-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, #1e1e3a 0%, #1a1a2e 100%); } .ds-anime-card__score { position: absolute; top: 6px; right: 6px; display: flex; align-items: center; gap: 3px; background: rgba(15,15,23,0.8); backdrop-filter: blur(4px); border: 1px solid rgba(45,45,78,0.5); border-radius: 6px; padding: 3px 6px; font-size: 11px; font-weight: 600; color: #e2e8f0; font-family: 'Geist Sans', system-ui, sans-serif; } .ds-anime-card__format { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 16px 8px 6px; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.06em; font-family: 'Geist Sans', system-ui, sans-serif; } .ds-anime-card__title { margin: 6px 2px 2px; font-size: 12px; font-weight: 500; color: #e2e8f0; line-height: 1.4; font-family: 'Geist Sans', system-ui, sans-serif; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; transition: color 150ms cubic-bezier(0.16,1,0.3,1); } .ds-anime-card:hover .ds-anime-card__title { color: #7c3aed; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Void background, Indigo Border stroke. Focus ring in Violet Pulse. Label always visible above — never placeholder-only.",
+      "html": "<div class=\"ds-input-group\"><label class=\"ds-input-label\" for=\"ds-demo-input\">Email</label><input class=\"ds-input\" id=\"ds-demo-input\" type=\"email\" placeholder=\"you@example.com\" /></div>",
+      "css": ".ds-input-group { display: flex; flex-direction: column; gap: 6px; } .ds-input-label { font-family: 'Geist Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; color: #e2e8f0; } .ds-input { background: #0f0f17; color: #e2e8f0; border: 1px solid #2d2d4e; border-radius: 8px; padding: 8px 12px; font-size: 14px; font-family: 'Geist Sans', system-ui, sans-serif; line-height: 1.5; outline: none; transition: border-color 150ms cubic-bezier(0.16,1,0.3,1), box-shadow 150ms cubic-bezier(0.16,1,0.3,1); width: 100%; box-sizing: border-box; } .ds-input::placeholder { color: #94a3b8; } .ds-input:focus { box-shadow: 0 0 0 2px #0f0f17, 0 0 0 4px #7c3aed; } .ds-input:disabled { opacity: 0.38; cursor: not-allowed; }"
+    },
+    {
+      "name": "Genre Badge",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Identification chip for anime genres. Deep Indigo background, shape alone signals the chip — no coloured border.",
+      "html": "<div style=\"display:flex;gap:6px;flex-wrap:wrap\"><span class=\"ds-badge\">Action</span><span class=\"ds-badge\">Fantasy</span><span class=\"ds-badge\">Shounen</span><span class=\"ds-badge\">Adventure</span></div>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; background: #1e1e3a; color: #e2e8f0; font-size: 11px; font-weight: 500; font-family: 'Geist Sans', system-ui, sans-serif; padding: 3px 10px; border-radius: 4px; line-height: 1.5; white-space: nowrap; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky top nav. The Void at 90% opacity, backdrop-blur. Logo left, primary links centre (desktop), avatar right.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__logo\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"15\" rx=\"2\"/><polyline points=\"17 2 12 7 7 2\"/></svg>AniTrack</a><div class=\"ds-nav__links\"><a class=\"ds-nav__link ds-nav__link--active\" href=\"#\">Home</a><a class=\"ds-nav__link\" href=\"#\">Diary</a><a class=\"ds-nav__link\" href=\"#\">Lists</a><a class=\"ds-nav__link\" href=\"#\">Stats</a></div><div class=\"ds-nav__avatar\">DW</div></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 16px; background: rgba(15,15,23,0.9); border-bottom: 1px solid #2d2d4e; backdrop-filter: blur(8px); height: 64px; padding: 0 24px; font-family: 'Geist Sans', system-ui, sans-serif; } .ds-nav__logo { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 700; color: #7c3aed; text-decoration: none; flex-shrink: 0; transition: color 150ms; } .ds-nav__logo:hover { color: rgba(124,58,237,0.8); } .ds-nav__links { display: flex; align-items: center; gap: 4px; flex: 1; } .ds-nav__link { display: flex; align-items: center; padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: #94a3b8; text-decoration: none; transition: background 150ms cubic-bezier(0.16,1,0.3,1), color 150ms cubic-bezier(0.16,1,0.3,1); } .ds-nav__link:hover { background: rgba(30,30,58,0.6); color: #e2e8f0; } .ds-nav__link--active { background: #1e1e3a; color: #e2e8f0; } .ds-nav__avatar { width: 36px; height: 36px; border-radius: 50%; background: #7c3aed; color: #f8fafc; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; cursor: pointer; transition: opacity 150ms; } .ds-nav__avatar:hover { opacity: 0.85; }"
+    },
+    {
+      "name": "Standard Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Featured surface card. Obsidian background, 12px radius, 1px Indigo Border. Used for profile, stats, CTA panels.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card__title\">Your Stats</h3><p class=\"ds-card__body\">You have watched 142 anime across 18 genres. Your top genre is Action at 34 entries.</p></div>",
+      "css": ".ds-card { background: #1a1a2e; border: 1px solid #2d2d4e; border-radius: 12px; padding: 24px; font-family: 'Geist Sans', system-ui, sans-serif; } .ds-card__title { font-size: 20px; font-weight: 700; color: #e2e8f0; margin: 0 0 12px; line-height: 1.3; } .ds-card__body { font-size: 14px; font-weight: 400; color: #94a3b8; margin: 0; line-height: 1.6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Personal Archive",
+    "overview": "AniTrack is the visual equivalent of a meticulously kept shelf of physical media — each anime logged is a title that belongs to someone, a record of real time spent and genuine feeling. The UI is dark by design and by identity, not by fashion. It recedes so the content — cover art, titles, ratings — can be the loudest thing on screen.\n\nThe system rejects three failure modes by name: MyAnimeList's cluttered database aesthetic, generic SaaS templates (cream backgrounds, rounded ghost-card grids, hero-metric dashboards), and the chaotic otaku-site (competing colour families, banner overload, visual noise). What remains is something quieter and more deliberate — a space for obsessives who want their watch history to look as considered as it feels.\n\nDensity is controlled. Colour is restrained to a single violet/indigo axis. Typography leans on weight contrast, not size contrast. Motion is purposeful — a direct response to action, never decoration.",
+    "keyCharacteristics": [
+      "Deep void background (#0f0f17) with tonal surface lifts, no shadows at rest",
+      "One primary accent (Violet Pulse #7c3aed) and one supporting accent (Indigo Spark #6366f1)",
+      "Weight-driven hierarchy: 900 display → 700 headline → 500 label → 400 body",
+      "Taut, precise components: 8px radius, clear border edges, no ghost-card pairing",
+      "Flat tonal elevation; depth from surface colour steps, not box-shadows"
+    ],
+    "rules": [
+      { "name": "The One Axis Rule", "body": "The violet-to-indigo accent axis is the only expressive colour in the system. No greens for success, no blues for info, no additional brand hues.", "section": "colors" },
+      { "name": "The Rarity Principle", "body": "Violet Pulse appears on ≤15% of any given screen surface. If a page feels purple, the accent is being overused.", "section": "colors" },
+      { "name": "The Weight-Not-Size Rule", "body": "Hierarchy is expressed through font-weight before font-size. Reserve size increases for genuine level jumps (title → headline → display).", "section": "typography" },
+      { "name": "The 14px Floor Rule", "body": "No body text below 14px. The 10px format strip on AnimeCard is the sole permitted exception.", "section": "typography" },
+      { "name": "The Tonal Stack Rule", "body": "New surfaces must use one of three existing surface tokens: The Void / Obsidian / Deep Indigo. Do not introduce ad-hoc rgba() intermediate tones.", "section": "elevation" },
+      { "name": "The Shadow Exception Rule", "body": "Box-shadows are reserved for two cases only: hover state on interactive cards (violet glow) and modal backdrop scrim. A shadow at rest is decoration masquerading as architecture.", "section": "elevation" }
+    ],
+    "dos": [
+      "Let cover art carry the visual energy — keep surrounding chrome quiet",
+      "Use font-weight contrast (700 vs 400) before font-size contrast to establish hierarchy",
+      "Keep the accent to Violet Pulse (#7c3aed) and Indigo Spark (#6366f1) only",
+      "Show skeleton loading states for async content > 300ms using Deep Indigo blocks",
+      "Verify WCAG AA (4.5:1) whenever Slate Muted text appears on a non-standard surface",
+      "Give every interactive element a visible focus ring: 2px Violet Pulse, 2px ring-offset at The Void",
+      "Apply text-wrap: balance to all h1–h3 elements",
+      "Spatially separate destructive actions from primary actions"
+    ],
+    "donts": [
+      "Don't build anything that resembles MyAnimeList — no data-table sprawl or legacy tracker layout",
+      "Don't use warm-tinted or cream backgrounds, ghost-card grids with drop shadows, or numbered section markers",
+      "Don't introduce competing colour families or visual noise that competes with anime cover art",
+      "Don't use gradient text (background-clip: text + gradient)",
+      "Don't use border-left > 1px as a coloured accent stripe on cards or alerts",
+      "Don't pair a 1px border AND a box-shadow > 8px blur on the same element at rest",
+      "Don't exceed 16px border-radius on cards or panels",
+      "Don't rely on colour alone to convey score quality — pair with star icon and numeric value",
+      "Don't put primary navigation behind a dropdown on desktop when authenticated",
+      "Don't add a fourth surface token — simplify the layout instead"
+    ]
+  }
+}
